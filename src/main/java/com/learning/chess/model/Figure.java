@@ -2,12 +2,14 @@ package com.learning.chess.model;
 
 import java.util.List;
 
-public abstract class Figure {
-    public abstract FigureType getType();
+public interface Figure {
+    FigureType getType();
 
-    public abstract Color getColor();
+    Color getColor();
 
-    public abstract List<Cell> getAvailableMovements(Integer boardSize);
+    List<Cell> getAvailableMovements();
 
-    public abstract void setPosition(Cell position);
+    void setPosition(Cell position);
+
+    void setBoard(Board board);
 }
